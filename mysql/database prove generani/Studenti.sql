@@ -49,11 +49,15 @@ INSERT INTO Studenti (Cognome, Nascita, Capogruppo)
 VALUES
 ('Rossi', '1990-05-15', 1),
 ('Bianchi', '1995-08-10', 1),
-('Verdi', '1992-02-20', 2),
-('Neri', '1993-07-05', 2);
+('Verdi', '1992-02-20', 3),
+('Neri', '1993-07-05', 3);
 
 SELECT * FROM Studenti;
 
 SELECT s.Cognome, s1.Cognome
 FROM Studenti s,Studenti s1
 WHERE s.Capogruppo = s1.matricola;
+
+UPDATE Studenti 
+SET Capogruppo = '3'
+WHERE Capogruppo = '2';
